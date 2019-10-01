@@ -26,9 +26,17 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>hu.atka.katicafocifx.main.Main</mainClass>
+							<mainClass>hu.atka.katicafocifx.view.main.Main</mainClass>
 						</manifest>
 					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>

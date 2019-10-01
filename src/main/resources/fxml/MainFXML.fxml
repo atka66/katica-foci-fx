@@ -2,7 +2,7 @@
 
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.layout.Pane?>
-<Pane xmlns:fx="http://javafx.com/fxml" fx:controller="hu.atka.katicafocifx.controller.MainController">
-    <Canvas fx:id="canvas"/>
+<Pane xmlns:fx="http://javafx.com/fxml" fx:controller="hu.atka.katicafocifx.view.controller.MainController">
+    <Canvas fx:id="canvas" onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased"/>
 </Pane>
 

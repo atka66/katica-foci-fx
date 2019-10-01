@@ -1,6 +1,6 @@
-package hu.atka.katicafocifx.main;
+package hu.atka.katicafocifx.view.main;
 
-import hu.atka.katicafocifx.resources.Settings;
+import hu.atka.katicafocifx.view.resources.Settings;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
