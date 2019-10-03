@@ -34,8 +34,17 @@ public class Ball {
 				double tangentX = player.getY() - this.y;
 				double tangentY = player.getX() - this.x;
 				// normalization
-				double normTanX = (tangentX) / dist;
-				double normTanY = (tangentY) / dist;
+				tangentX /= dist;
+				tangentY /= dist;
+				double relVelX = player.getSpeedX() - this.speedX;
+				double relVelY = player.getSpeedY() - this.speedY;
+				double length = (relVelX * tangentX) + (relVelY * tangentY);
+				double velCompOnTanX =  tangentX * length;
+				double velCompOnTanY =  tangentY * length;
+				double velCompPerToTanX = relVelX - velCompOnTanX;
+				double velCompPerToTanY = relVelY - velCompOnTanY;
+				this.speedX -= velCompPerToTanX;
+				this.speedY -= velCompPerToTanY;
 			}
 		}
 		// floor
