@@ -31,10 +31,11 @@ public class Ball {
 		for (Player player : players) {
 			double dist = Math.sqrt(Math.pow(player.getX() - this.getX(), 2) + Math.pow(player.getY() - this.getY(), 2));
 			if (dist < Settings.BALL_RADIUS + Settings.PLAYER_RADIUS) {
-				this.speedX += player.getSpeedX();
-				this.speedY = player.getSpeedY();
-				//newVelX1 = (firstBall.speed.x * (firstBall.mass – secondBall.mass) + (2 * secondBall.mass * secondBall.speed.x)) / (firstBall.mass + secondBall.mass);
-				//newVelY1 = (firstBall.speed.y * (firstBall.mass – secondBall.mass) + (2 * secondBall.mass * secondBall.speed.y)) / (firstBall.mass + secondBall.mass);
+				double tangentX = player.getY() - this.y;
+				double tangentY = player.getX() - this.x;
+				// normalization
+				double normTanX = (tangentX) / dist;
+				double normTanY = (tangentY) / dist;
 			}
 		}
 		// floor
